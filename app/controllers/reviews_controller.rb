@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant), notice: 'Review was successfully created.'
     else
-      render :new, status: :unprocessable_entity
+      render "restaurants/show", status: :unprocessable_entity
     end
   end
 
